@@ -1,0 +1,89 @@
+.whatch {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+ 
+  justify-content: space-between;
+  gap: 15px;
+}
+.whatch-title {
+    font-size: 14px;
+}
+.whatch-close {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.whatch-close:hover{
+    border: 1px solid rgb(247, 244, 244);
+    border-radius: 5px;
+}
+.clock-face {
+    width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+    background: url('./whatch.png') center/cover no-repeat;
+}
+/* .hours-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
+.clock-face::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    margin: -6px 0 0 -6px;
+    background-color: #000;
+    border-radius: 6px;
+  }
+.hour-hand {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 -4px -25%;
+    padding: 4px 2px 4px 25%;
+    background-color: rgb(11, 11, 11);
+    transform-origin: 100% 50%;
+    border-radius: 4px 0 0 4px;
+}
+.minute-hand {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: -40% 3px 0 0;
+    padding: 40% 3px 0;
+    background-color: rgb(29, 29, 30);
+    transform-origin: 50% 100%;
+    border-radius: 3px 3px 0 0;
+}
+.second-hand {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: -40% 1px 0 0;
+    padding: 40% 1px 0;
+    background-color: #000;
+    transform-origin: 50% 100%;
+}
+.clock__num {
+    margin: 0 auto;
+}
+
